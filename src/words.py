@@ -3,10 +3,10 @@ import easygui
 
 class Words:
     def __init__(self):
-        self.words = []
+        self.word_list = []
 
     def select_file(self):
-        return easygui.fileopenbox(msg="Select a text file to import", title="Text File Selection",
+        return easygui.fileopenbox(msg="Select a text file to import", title="File Selection",
                                        default='*', filetypes=["*.txt"])
 
     def read_file(self):
@@ -20,7 +20,7 @@ class Words:
             for line in file:
                 line = line.strip()
                 if line:
-                    self.words.append(line)
+                    self.word_list.append(line)
 
     def get_word_list(self):
-        return self.words
+        return self.word_list
