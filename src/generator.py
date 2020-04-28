@@ -25,6 +25,10 @@ class Generator:
         res = requests.get(url, headers=headers)
         return res.json()
 
-    # Set word manually
+    # Set Word
     def set_word(self, word):
         self.word = word.lower()
+
+    # Get Word
+    def get_word(self):
+        return self.word or None
